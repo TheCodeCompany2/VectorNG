@@ -7,6 +7,7 @@
 
 > ⚠️ **Project Status: Under Active Development / Learning Phase** 🛠️  
 > This repository is a blank slate where I am actively learning Python. There is no finished game here yet—just a student writing code, breaking things, and figuring out how game loops and physics vectors work.
+> *Note: This code is being built and tested exclusively on a Raspberry Pi 400 environment; I have no idea how it will perform, scale, or work on other devices or operating systems yet.*
 
 ---
 
