@@ -44,9 +44,9 @@ def update():
         car.position -= car.forward * current_speed * time.dt
     
     if held_keys['a']:
-        car.rotation_y -= 40 * time.dt
+        car.rotation_y -= 80 * (1 - current_speed/80) * time.dt 
     elif held_keys['d']:
-        car.rotation_y += 40 * time.dt
+        car.rotation_y += 80 * (1 - current_speed/80) * time.dt 
  
 build_track()
 engine.run()
