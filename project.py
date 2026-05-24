@@ -16,15 +16,16 @@
 
 from ursina import *
 engine = Ursina()
+from test_track import build_track
 
 car = Entity(model = 'cube', color=color.rgb(0, 0, 64), scale=(1.2, 0.5, 3))
 car.wireframe_setter = True
-
 nose = Entity(parent = car, model = "cube", color = color.rgb(204, 0, 0), scale = (1.8, 0.1, 0.5), z = 1.7, y = 0.1)
 tail = Entity(parent = car, model = "cube", color = color.rgb(0, 0, 0), scale = (1.4, 0.6, 0.1), z = -1.5, y = 0.4)
 airbox = Entity(parent = car, model = "cube", color = color.rgb(255, 222, 0), scale = (0.3, 0.5, 0.4), z = -0.2, y = 0.5)
 
-ground = Entity(model = 'plane', scale = 500, color = color.rgb(0.16,0.16,0.16), y = -0.3)
+ground = Entity(model = 'plane', scale = 500, color = color.rgb(0.4,0.4,0.4), y = -0.3)
+window.color = color.rgb(0.1,0.15,0.2)
 
 camera.parent = car
 camera.position = (0, 4.5,-15)
@@ -43,8 +44,9 @@ def update():
         car.position -= car.forward * current_speed * time.dt
     
     if held_keys['a']:
-        car.rotation_y -= 60 * time.dt
+        car.rotation_y -= 40 * time.dt
     elif held_keys['d']:
-        car.rotation_y += 60 * time.dt
+        car.rotation_y += 40 * time.dt
  
+build_track()
 engine.run()
