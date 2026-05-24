@@ -28,8 +28,8 @@ ground = Entity(model = 'plane', scale = 500, color = color.rgb(0.4,0.4,0.4), y 
 window.color = color.rgb(0.1,0.15,0.2)
 
 camera.parent = car
-camera.position = (0, 4.5,-15)
-camera.rotation_x = 10
+camera.position = (0, 2.5,-15)
+camera.rotation_x = 0
 
 def update():
     current_speed = 0
