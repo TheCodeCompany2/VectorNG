@@ -24,7 +24,7 @@ nose = Entity(parent = car, model = "cube", color = color.rgb(204, 0, 0), scale 
 tail = Entity(parent = car, model = "cube", color = color.rgb(0, 0, 0), scale = (1.4, 0.6, 0.1), z = -1.5, y = 0.4)
 airbox = Entity(parent = car, model = "cube", color = color.rgb(255, 222, 0), scale = (0.3, 0.5, 0.4), z = -0.2, y = 0.5)
 
-ground = Entity(model = 'plane', scale = 500, color = color.rgb(40,40,40), y = -0.3)
+ground = Entity(model = 'plane', scale = 500, color = color.rgb(0.16,0.16,0.16), y = -0.3)
 
 camera.parent = car
 camera.position = (0, 4.5,-15)
