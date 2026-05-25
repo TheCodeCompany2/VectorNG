@@ -28,6 +28,8 @@ def build_track():
     Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (5, 0, 0))
 #hairpin apron(track)
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (36, 0.05, 25), position = (13, -0.28, 107))
+#hairpin inside apex kerb
+    Entity(model = "sphere", color = color.rgb(0.9,0.1,0.1), scale = (14, 0.08, 20), position = (12.25, -0.2, 98))
 #straight2
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (25,-0.28,0))
 #runoffs for straight2
