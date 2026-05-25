@@ -15,6 +15,7 @@
 # ==============================================================================
 
 from ursina import *
+import math
 engine = Ursina()
 
 def build_track():
@@ -28,8 +29,19 @@ def build_track():
     Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (5, 0, 0))
 #hairpin apron(track)
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (36, 0.05, 25), position = (13, -0.28, 107))
-#hairpin inside apex kerb
-    Entity(model = "sphere", color = color.rgb(0.9,0.1,0.1), scale = (14, 0.08, 20), position = (12.25, -0.2, 98))
+#hairpin outside apex kerb
+    num_segments = 30
+    outer_radius = 16.0
+    center_x = 12.5
+    center_z = 100.0
+
+    for i in range(num_segments + 1):
+        angle_radians = math.radians((i/num_segments)*180)
+        x_pos = center_x + (outer_radius * math.cos(angle_radians))
+        z_pos = center_z + (outer_radius * math.sin(angle_radians))
+        angle_degrees = 90 - math.degrees(angle_radians)
+
+        Entity(model = "cube", color = color.rgb(0.8,0.))
 #straight2
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (25,-0.28,0))
 #runoffs for straight2
