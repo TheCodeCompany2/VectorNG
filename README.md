@@ -27,7 +27,7 @@ I am coding and running this project entirely on a lightweight, hardware-constra
 
 * **Hardware:** Raspberry Pi 400 (Cortex-A72 Quad-core)
 * **Storage & OS:** 32GB SanDisk USB Drive (Configured for Direct USB Boot)
-* **Language:** Python 3.12 / 3.13
+* **Language:** Python 3.13.5
 
 ---
 
