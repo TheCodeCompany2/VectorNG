@@ -20,13 +20,19 @@ engine = Ursina()
 def build_track():
 #straight1
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (0,-0.28,0))
-#runoffs   
+#runoffs for straight1 
     Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (-4.75,-0.27, 0))
     Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (4.5,-0.27, 0))
-#barriers
+#barriers for straight1
     Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (-5.75, 0, 0))
     Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (5, 0, 0))
 #hairpin apron(track)
-    Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (14, 0.05, 20), position = (0, -0.28, 107))
+    Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (36, 0.05, 25), position = (13, -0.28, 107))
 #straight2
-    Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (9,-0.28,0))
+    Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (25,-0.28,0))
+#runoffs for straight2
+    Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (20.25,-0.27, 0))
+    Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (29.25,-0.27, 0))
+#barriers for straight2
+    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (19.25, 0, 0))
+    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (30.75, 0, 0))
