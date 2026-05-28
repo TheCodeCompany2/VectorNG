@@ -67,7 +67,8 @@ def build_track():
             position= (x_pos, -0.22, z_pos),
             rotation_y=angle_degrees
         )
-
+#barriers for turn1
+    Entity(model='cube', color = color.rgb(0.475,0.475,0.475), scale = (36,0.8,0.3), position = (13,0,140))
 #straight2
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (25,-0.28,0))
 #runoffs for straight2
@@ -75,4 +76,4 @@ def build_track():
     Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (29.25,-0.27, 0))
 #barriers for straight2
     Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (19.25, 0, 0))
-    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (30.75, 0, 0))
+    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,280), position = (30.75, 0, 0))
