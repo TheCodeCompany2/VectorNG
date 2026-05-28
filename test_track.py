@@ -63,8 +63,8 @@ def build_track():
         Entity(
             model = "cube", 
             color = color.rgb(0.78,0.72,0.61),
-            scale = (4.5,0.1,4),
-            position= (x_pos, -0.2, z_pos),
+            scale = (4.5,0.01,4),
+            position= (x_pos, -0.22, z_pos),
             rotation_y=angle_degrees
         )
 
