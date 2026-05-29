@@ -31,7 +31,7 @@ def build_track():
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (36, 0.05, 25), position = (13, -0.28, 107))
 #outside apex kerb turn1
     num_segments = 30
-    outer_radius = 18.0
+    outer_radius = 18.5
     center_x = 13
     center_z = 101.0
 
@@ -87,7 +87,7 @@ def build_track():
             rotation_y=angle_degrees
         )
 
-    Entity(model ="cube",color = color.rgb(0.78,0.72,0.61), scale = (36,0.01, 25), position = (13,-0.22,128))
+    Entity(model ="cube",color = color.rgb(0.78,0.72,0.61), scale = (36,0.01, 25), position = (13,-0.22,132))
 #barriers for turn1
     Entity(model='cube', color = color.rgb(0.475,0.475,0.475), scale = (36,0.8,0.3), position = (13,0,140))
 #straight2
