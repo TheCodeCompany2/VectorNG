@@ -63,7 +63,7 @@ def build_track():
             rotation_y=angle_degrees
         )
 #inside apex kerb turn1
-    num_segments = 30
+    num_segments = 20
     inner_radius = 7.5
     center_x = 12.5
     center_z = 100.0
@@ -105,10 +105,31 @@ def build_track():
 #barriers for turn1
     Entity(model='cube', color = color.rgb(0.475,0.475,0.475), scale = (36,0.8,0.3), position = (13,0,140))
 #straight2
-    Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,200), position = (25,-0.28,0))
+    Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (7.4, 0.05,400), position = (25,-0.28,-100))
 #runoffs for straight2
-    Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (20.25,-0.27, 0))
-    Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,200), position = (29.25,-0.27, 0))
+    Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,400), position = (20.25,-0.27, -100))
+    Entity(model='cube', color = color.rgb(0.13,0.37,0.13), scale = (2,0.04,400), position = (29.25,-0.27, -100))
 #barriers for straight2
-    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,200), position = (19.25, 0, 0))
-    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,280), position = (30.75, 0, 0))
+    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,400), position = (19.25, 0, -100))
+    Entity(model='cube', color = color.rgb(0.5,0.5,0.5), scale = (0.3,0.8,480), position = (30.75, 0, -100))
+#turn2 apron(track) inspired by Shanghai sweeper
+    center_x2 = -25.0
+    center_z2 = -300.0
+    outer_radius2 = 53.7
+    inner_radius2 = 46.3
+
+    shanghai_vertices, shanghai_triangles = [],[]
+
+    for i in range(31):
+        angle = math.radians(-(i/30)*180)
+        outer_x = center_x2 + (outer_radius2 * math.cos(angle))
+        outer_z = center_z2 + (outer_radius2 * math.sin(angle))
+        inner_x = center_x2 + (inner_radius2 * math.cos(angle))
+        inner_z = center_z2 + (inner_radius2 * math.sin(angle))
+        shanghai_vertices.extend([Vec3(inner_x,-0.28,inner_z),Vec3(outer_x,-0.28,outer_z)])
+
+        if i < 30:
+            c = i*2
+            shanghai_triangles.extend([(c,c+1,c+2),(c+2,c+1,c+3)])
+        
+    Entity(model = Mesh(vertices=shanghai_vertices, triangles = shanghai_triangles, mode = 'triangle'),color = color.rgb(0.16,0.16,0.16), double_sided = True)
