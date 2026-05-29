@@ -27,11 +27,30 @@ def build_track():
 #barriers for straight1
     Entity(model='cube', color = color.rgb(0.475,0.475,0.475), scale = (0.3,0.8,280), position = (-5.75, 0, 0))
     Entity(model='cube', color = color.rgb(0.475,0.475,0.475), scale = (0.3,0.8,200), position = (5, 0, 0))
-#hairpin apron(track)
+#turn1 apron(track)
     Entity(model = "cube", color = color.rgb(0.16,0.16,0.16), scale = (36, 0.05, 25), position = (13, -0.28, 107))
-#hairpin outside apex kerb turn1
+#outside apex kerb turn1
     num_segments = 30
     outer_radius = 18.0
+    center_x = 13
+    center_z = 101.0
+
+    for i in range(num_segments + 1):
+        angle_radians = math.radians((i/num_segments)*180)
+        x_pos = center_x + (outer_radius * math.cos(angle_radians))
+        z_pos = center_z + (outer_radius * math.sin(angle_radians))
+        angle_degrees = 90 - math.degrees(angle_radians)
+
+        Entity(
+            model = "cube", 
+            color = color.rgb(0.5,0.5, 0.5) if i%2 ==0 else color.rgb(0.8,0.1,0.1),
+            scale = (1.5,0.01,3.8),
+            position= (x_pos, -0.2, z_pos),
+            rotation_y=angle_degrees
+        )
+#inside apex kerb turn1
+    num_segments = 30
+    outer_radius = 7.5
     center_x = 13
     center_z = 101.0
 
